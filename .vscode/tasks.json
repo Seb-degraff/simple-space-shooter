@@ -1,0 +1,30 @@
+{
+    "tasks": [
+        {
+            "type": "process",
+            "label": "build project",
+            "command": "${workspaceFolder}/build.sh",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "dependsOn": "build project",
+            "label": "run",
+            "command": "bin/game",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "version": "2.0.0"
+}
