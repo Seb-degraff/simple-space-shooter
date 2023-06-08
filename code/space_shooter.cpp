@@ -25,9 +25,14 @@ Feel:
 
 #include <stdio.h>
 #include "MiniFB.h"
-#include <unistd.h>
 #include <stdlib.h>
 #include <memory.h>
+
+#if defined(__unix__) || defined(__unix) || (defined(__APPLE__) && defined(__MACH__))
+    #include <unistd.h>
+#else
+    #include <io.h>
+#endif
 
 #define _USE_MATH_DEFINES
 #include <math.h>

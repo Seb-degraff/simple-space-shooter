@@ -1,3 +1,4 @@
+if not exist bin mkdir bin
 
 clang++ code/space_shooter.cpp ^
     -o bin/game.exe ^
